@@ -39,12 +39,6 @@
     "auto-reconnect-delay": 1000,
     "max-reconnect-delay": 1000
   },
-  },
-    "chat-log": true,
-    "auto-disconnect": true,
-    "auto-disconnect-delay": 300000,
-    "max-disconnect-delay": 600000
-  },
   "movement": {
     "enabled": true,
     "circle-walk": {
