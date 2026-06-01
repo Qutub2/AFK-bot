@@ -2,7 +2,7 @@
   "name": "AFK Bot",
   "bot-account": {
     "username": "BOT1",
-    "password": "URgod1",
+    "password": "<URgod1> <URgod1>",
     "type": "offline"
   },
   "server": {
@@ -19,7 +19,7 @@
   "utils": {
     "auto-auth": {
       "enabled": true,
-      "password": "URgod1"
+      "password": "<URgod1> <URgod1>"
     },
     "anti-afk": {
       "enabled": true,
