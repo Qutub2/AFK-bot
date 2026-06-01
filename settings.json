@@ -38,7 +38,7 @@
     "auto-reconnect": true,
     "auto-reconnect-delay": 1000,
     "max-reconnect-delay": 1000
-  }
+  },
   "movement": {
     "enabled": true,
     "circle-walk": {
