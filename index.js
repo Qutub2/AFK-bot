@@ -1135,6 +1135,7 @@ let activeIntervals = [];
 let reconnectTimeoutId = null;
 let connectionTimeoutId = null;
 let isReconnecting = false;
+let reconnectCycle = null;
 
 function clearBotTimeouts() {
   if (reconnectTimeoutId) {
@@ -1253,7 +1254,15 @@ function createBot() {
       botState.lastActivity = Date.now();
       botState.reconnectAttempts = 0;
       isReconnecting = false;
+      if (reconnectCycle) {
+  clearInterval(reconnectCycle);
+}
 
+reconnectCycle = setInterval(() => {
+  if (bot && botState.connected) {
+    bot.quit("Scheduled reconnect");
+  }
+}, 300000);
       addLog(
         `[Bot] [+] Successfully spawned on server! (Version: ${bot.version})`,
       );
