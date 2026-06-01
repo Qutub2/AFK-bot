@@ -1259,10 +1259,14 @@ function createBot() {
 }
 
 reconnectCycle = setInterval(() => {
+  console.log("TIMER WORKING");
+  
   if (bot && botState.connected) {
+    console.log("DISCONNECTING");
     bot.quit("Scheduled reconnect");
   }
-}, 300000);
+}, 60000);
+      
       addLog(
         `[Bot] [+] Successfully spawned on server! (Version: ${bot.version})`,
       );
